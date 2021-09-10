@@ -3,7 +3,10 @@
     "outDir": "./dist",
     "module": "commonjs",
     "target": "esnext",
-    "lib": ["esnext", "webworker"],
+    "lib": [
+      "esnext",
+      "webworker"
+    ],
     "alwaysStrict": true,
     "strict": true,
     "preserveConstEnums": true,
@@ -14,8 +17,15 @@
       "@cloudflare/workers-types",
       "@types/jest",
       "@types/service-worker-mock"
-    ]
+    ],
+    "resolveJsonModule": true
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "dist", "test"]
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "test"
+  ]
 }

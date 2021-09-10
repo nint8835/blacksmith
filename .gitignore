@@ -3,3 +3,6 @@ node_modules
 transpiled
 /.idea/
 .cargo-ok
+
+# Local util scripts config
+config.mjs

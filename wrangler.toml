@@ -1,7 +1,7 @@
 name = "blacksmith"
 type = "javascript"
 zone_id = ""
-account_id = ""
+account_id = "fb0b2efa66fe2798edb711a98a48f32f"
 route = ""
 workers_dev = true
 
