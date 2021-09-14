@@ -4,6 +4,9 @@ zone_id = ""
 account_id = "fb0b2efa66fe2798edb711a98a48f32f"
 route = ""
 workers_dev = true
+kv_namespaces = [
+  { binding = "COMMANDS", id = "f52b37004eb54802881aa3c2a9ee04b4"}
+]
 
 [build]
 command = "npm install && npm run build"

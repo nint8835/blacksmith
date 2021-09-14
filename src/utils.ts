@@ -5,3 +5,9 @@ export function respond(response: APIInteractionResponse) {
     headers: { 'content-type': 'application/json' },
   });
 }
+
+export interface CommandData {
+  text: string;
+  ownerId: string;
+  commandId: string;
+}
