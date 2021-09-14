@@ -92,9 +92,7 @@ async function handleRemoveCommand(
     options.options[0] as ApplicationCommandInteractionDataOptionString
   ).value;
 
-  const commandDataStr = (await COMMANDS.get(`${guildId}:${commandName}`)) as
-    | string
-    | null;
+  const commandDataStr = await COMMANDS.get(`${guildId}:${commandName}`);
 
   if (commandDataStr === null) {
     return respond({
@@ -188,10 +186,25 @@ export async function handleRequest(request: Request): Promise<Response> {
     }
   }
 
+  const commandDataStr = await COMMANDS.get(
+    `${interaction.guild_id}:${interactionData.name}`,
+  );
+
+  if (commandDataStr === null) {
+    return respond({
+      type: InteractionResponseType.ChannelMessageWithSource,
+      data: {
+        content: `Command ${interactionData.name} does not exist. This should not be able to happen.`,
+      },
+    });
+  }
+
+  const commandData = JSON.parse(commandDataStr) as CommandData;
+
   return respond({
     type: InteractionResponseType.ChannelMessageWithSource,
     data: {
-      content: `\`\`\`js\n${JSON.stringify(interactionData)}\n\`\`\``,
+      content: commandData.text,
     },
   });
 }
