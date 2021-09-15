@@ -1,7 +1,7 @@
 {
-  "name": "worker-typescript-template",
+  "name": "blacksmith",
   "version": "1.0.0",
-  "description": "Cloudflare worker TypeScript template",
+  "description": "Cloudflare Workers-based bot for adding custom slash commands to a server",
   "main": "dist/worker.js",
   "scripts": {
     "build": "webpack",
@@ -9,7 +9,6 @@
     "lint": "eslint --max-warnings=0 src && prettier --check '*.{json,js}' 'src/**/*.{js,ts}' 'test/**/*.{js,ts}'",
     "test": "jest --config jestconfig.json --verbose"
   },
-  "author": "author",
   "license": "MIT",
   "eslintConfig": {
     "root": true,
