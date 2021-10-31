@@ -8,6 +8,6 @@ export function respond(response: APIInteractionResponse) {
 
 export interface CommandData {
   text: string;
-  ownerId: string;
+  owner: string;
   commandId: string;
 }

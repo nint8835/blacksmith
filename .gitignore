@@ -6,3 +6,5 @@ transpiled
 
 # Local util scripts config
 config.mjs
+
+site/.python-version

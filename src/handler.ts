@@ -104,7 +104,7 @@ async function handleRemoveCommand(
     });
   }
   const commandData = JSON.parse(commandDataStr) as CommandData;
-  if (commandData.ownerId !== authorId) {
+  if (commandData.owner !== authorId) {
     return respond({
       type: InteractionResponseType.ChannelMessageWithSource,
       data: {
