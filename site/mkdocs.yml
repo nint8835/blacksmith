@@ -26,7 +26,5 @@ extra:
       link: https://github.com/nint8835/blacksmith
       name: Source Code
 copyright: Copyright &copy; 2021 Riley Flynn
-plugins:
-  - git-revision-date-localized
 markdown_extensions:
   - attr_list
