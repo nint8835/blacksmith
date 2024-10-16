@@ -1,14 +1,19 @@
-name = "blacksmith"
-type = "javascript"
-zone_id = ""
-account_id = "fb0b2efa66fe2798edb711a98a48f32f"
-route = ""
-workers_dev = true
-kv_namespaces = [
-  { binding = "COMMANDS", id = "f52b37004eb54802881aa3c2a9ee04b4"}
-]
+#:schema node_modules/wrangler/config-schema.json
+name = "blacksmith-dev"
+main = "src/index.ts"
+compatibility_date = "2024-10-11"
+compatibility_flags = ["nodejs_compat"]
 
-[build]
-command = "npm install && npm run build"
-[build.upload]
-format = "service-worker"
+[observability]
+enabled = true
+
+[[kv_namespaces]]
+binding = "COMMANDS"
+id = "18078eb6be0a4ac8867b306bd45f8250"
+
+[env.production]
+name = "blacksmith"
+
+[[env.production.kv_namespaces]]
+binding = "COMMANDS"
+id = "f52b37004eb54802881aa3c2a9ee04b4"
