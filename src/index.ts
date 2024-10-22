@@ -1,5 +1,8 @@
-export default {
-	async fetch(request, env, ctx): Promise<Response> {
-		return new Response('Hello World!');
-	},
-} satisfies ExportedHandler<Env>;
+import { AutoRouter, type IRequest } from 'itty-router';
+import { handleRegisterCommands } from './routes/register-commands';
+
+const router = AutoRouter<IRequest, [Env, ExecutionContext]>() satisfies ExportedHandler<Env>;
+
+router.get('/utils/register-commands', handleRegisterCommands);
+
+export default { ...router };
