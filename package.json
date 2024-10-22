@@ -1,23 +1,23 @@
 {
-	"name": "blacksmith",
-	"version": "0.0.0",
-	"private": true,
-	"scripts": {
-		"deploy": "wrangler deploy",
-		"dev": "wrangler dev",
-		"start": "wrangler dev",
-		"cf-typegen": "wrangler types"
-	},
-	"devDependencies": {
-		"@cloudflare/workers-types": "^4.20241011.0",
-		"typescript": "^5.5.2",
-		"wrangler": "^3.60.3"
-	},
-	"dependencies": {
-		"@discordjs/builders": "^1.9.0",
-		"@discordjs/rest": "^2.4.0",
-		"discord-api-types": "^0.37.103",
-		"discord-interactions": "^4.1.0",
-		"itty-router": "^5.0.18"
-	}
+    "name": "blacksmith",
+    "version": "0.0.0",
+    "private": true,
+    "scripts": {
+        "deploy": "wrangler deploy",
+        "dev": "wrangler dev",
+        "start": "wrangler dev",
+        "cf-typegen": "wrangler types"
+    },
+    "devDependencies": {
+        "@cloudflare/workers-types": "^4.20241011.0",
+        "typescript": "^5.5.2",
+        "wrangler": "^3.60.3"
+    },
+    "dependencies": {
+        "@discordjs/builders": "^1.9.0",
+        "@discordjs/rest": "^2.4.0",
+        "discord-api-types": "^0.37.103",
+        "discord-interactions": "^4.1.0",
+        "itty-router": "^5.0.18"
+    }
 }

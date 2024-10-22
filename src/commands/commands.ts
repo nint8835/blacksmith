@@ -3,13 +3,13 @@ import { handleManageCommandsCommand } from './manage';
 import { handleSavedCommand } from './saved';
 
 export async function handleCommand(
-	interaction: APIApplicationCommandInteraction,
-	env: Env,
-	ctx: ExecutionContext,
+    interaction: APIApplicationCommandInteraction,
+    env: Env,
+    ctx: ExecutionContext,
 ): Promise<Response> {
-	if (interaction.data.name === 'commands') {
-		return handleManageCommandsCommand(interaction, env, ctx);
-	}
+    if (interaction.data.name === 'commands') {
+        return handleManageCommandsCommand(interaction, env, ctx);
+    }
 
-	return handleSavedCommand(interaction, env, ctx);
+    return handleSavedCommand(interaction, env, ctx);
 }
