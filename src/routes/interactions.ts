@@ -6,7 +6,8 @@ import {
 } from 'discord-api-types/v10';
 import { verifyKey } from 'discord-interactions';
 import type { IRequestStrict } from 'itty-router';
-import { respond } from './utils';
+import { handleCommand } from '../commands/commands';
+import { respond } from '../utils';
 
 export async function handleInteractions(request: IRequestStrict, env: Env, ctx: ExecutionContext): Promise<Response> {
 	const signature = request.headers.get('X-Signature-Ed25519') || '';
@@ -24,5 +25,5 @@ export async function handleInteractions(request: IRequestStrict, env: Env, ctx:
 		return respond({ type: InteractionResponseType.Pong });
 	}
 
-	return new Response('Todo');
+	return await handleCommand(interaction, env, ctx);
 }
