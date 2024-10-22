@@ -1,9 +1,13 @@
 import { SlashCommandBuilder } from '@discordjs/builders';
 import { REST } from '@discordjs/rest';
 import { RESTPostAPIApplicationCommandsResult, Routes } from 'discord-api-types/v10';
-import type { IRequest } from 'itty-router';
+import { type IRequestStrict } from 'itty-router';
 
-export async function handleRegisterCommands(request: IRequest, env: Env, ctx: ExecutionContext): Promise<Response> {
+export async function handleRegisterCommands(
+	request: IRequestStrict,
+	env: Env,
+	ctx: ExecutionContext,
+): Promise<Response> {
 	const rest = new REST({ version: '10' }).setToken(env.DISCORD_TOKEN);
 
 	try {
