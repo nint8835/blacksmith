@@ -1,14 +1,7 @@
 {
-    "[yaml]": {
-        "editor.formatOnSave": true
-    },
-    "[json]": {
-        "editor.formatOnSave": true
-    },
-    "[javascript]": {
-        "editor.formatOnSave": true
-    },
-    "[typescript]": {
-        "editor.formatOnSave": true
-    },
+	"editor.formatOnSave": true,
+	"editor.codeActionsOnSave": {
+		"source.organizeImports": "always"
+	},
+	"editor.defaultFormatter": "esbenp.prettier-vscode"
 }
