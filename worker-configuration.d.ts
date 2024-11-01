@@ -2,7 +2,8 @@
 
 interface Env {
     COMMANDS: KVNamespace;
-    DISCORD_PUBLIC_KEY: string;
     DISCORD_TOKEN: string;
+    DISCORD_PUBLIC_KEY: string;
     DISCORD_APP_ID: string;
+    DISCORD_APP_OWNER_ID: string;
 }

@@ -86,7 +86,7 @@ async function handleRemoveCommand(
     }
 
     const commandData = JSON.parse(commandDataStr) as CommandData;
-    if (commandData.owner !== interaction.member!.user.id) {
+    if (commandData.owner !== interaction.member!.user.id && interaction.member!.user.id !== env.DISCORD_APP_OWNER_ID) {
         return respond({
             type: InteractionResponseType.ChannelMessageWithSource,
             data: {
